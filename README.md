@@ -20,4 +20,4 @@ This will watch the project directory and restart as necessary.
 
 ## Special Attributions for this project
 
-- [donsky](https://www.donskytech.com)
+- [donsky](https://github.com/donskytech/sample-static-node-express-web-application.git)
