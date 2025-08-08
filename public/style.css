@@ -1,6 +1,7 @@
 * {
 	box-sizing: border-box;
 }
+
 body {
 	margin: 0;
 	font-family: Arial, sans-serif;
@@ -11,8 +12,57 @@ header {
 	background-color: #1e3a8a;
 	color: white;
 	text-align: center;
-	padding: 60px 20px;
+	padding: 0px 20px;
+	height: 100vh;
 }
+nav {
+	max-width: 1000px;
+	margin: auto;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.logo img {
+	height: 40px;
+}
+
+.hero-nav {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-items: center;
+	padding: 40px 40px;
+}
+
+.hero {
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: column;
+	gap: 40px;
+	justify-content: space-between;
+	align-items: center;
+	padding: 40px 40px;
+	height: 100%;
+}
+
+.hero-text h1 {
+	font-size: 36px;
+	text-transform: uppercase;
+	margin-bottom: 20px;
+}
+
+.hero-text h2 {
+	font-size: 24px;
+	margin-bottom: 10px;
+}
+
+.hero-image img {
+	max-width: 100%;
+	height: auto;
+	border-radius: 10px;
+}
+
 header h1 {
 	margin: 0;
 	font-size: 2.2em;
@@ -25,7 +75,6 @@ header p {
 	background-color: #2563eb;
 	color: white;
 	padding: 12px 24px;
-	margin-top: 20px;
 	border: none;
 	border-radius: 6px;
 	cursor: pointer;
@@ -60,11 +109,6 @@ section {
 .feature p {
 	font-size: 0.95em;
 }
-.cta {
-	background-color: #eff6ff;
-	text-align: center;
-	padding: 40px 20px;
-}
 footer {
 	background-color: #1e3a8a;
 	color: white;
@@ -87,10 +131,27 @@ footer {
 .social-links a:hover {
 	color: #cbd5e1;
 }
+
 @media (max-width: 768px) {
+	header {
+		height: auto;
+	}
 	header h1 {
 		font-size: 1.8em;
 	}
+	.hero-nav {
+		flex-direction: column;
+		align-items: center;
+	}
+
+	.nav-buttons {
+		align-items: center;
+	}
+
+	.nav-buttons button {
+		margin: 10px 0 0 0;
+	}
+
 	.features {
 		flex-direction: column;
 		align-items: center;
@@ -98,5 +159,9 @@ footer {
 	.feature {
 		flex: 1 1 100%;
 		max-width: 320px;
+	}
+
+	.compliance-features {
+		text-align: center;
 	}
 }
