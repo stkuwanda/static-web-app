@@ -40,10 +40,11 @@ nav {
 	flex-wrap: wrap;
 	flex-direction: column;
 	gap: 40px;
-	justify-content: space-between;
+	justify-content: center;
 	align-items: center;
 	padding: 40px 40px;
 	height: 100%;
+	margin-top: -120px;
 }
 
 .hero-text h1 {
@@ -55,6 +56,12 @@ nav {
 .hero-text h2 {
 	font-size: 24px;
 	margin-bottom: 10px;
+}
+
+.hero-image {
+	flex: 1 1 45%;
+	max-width: 600px;
+	text-align: center;
 }
 
 .hero-image img {
@@ -139,6 +146,9 @@ footer {
 	header h1 {
 		font-size: 1.8em;
 	}
+	.hero {
+		margin-top: 0;
+	}
 	.hero-nav {
 		flex-direction: column;
 		align-items: center;
@@ -146,10 +156,6 @@ footer {
 
 	.nav-buttons {
 		align-items: center;
-	}
-
-	.nav-buttons button {
-		margin: 10px 0 0 0;
 	}
 
 	.features {
