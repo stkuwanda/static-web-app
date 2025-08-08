@@ -1,0 +1,23 @@
+# Static Web App Project
+
+This project demoes serving static files with Nodejs and Express.
+
+### Usage
+
+Make sure to run in project root:
+
+```
+$ npm intall
+```
+
+Then start the project:
+
+```
+$ npm run dev
+```
+
+This will watch the project directory and restart as necessary.
+
+## Special Attributions for this project
+
+- [donsky](https://www.donskytech.com)
