@@ -116,6 +116,11 @@ section {
 .feature p {
 	font-size: 0.95em;
 }
+.compliance {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
 footer {
 	background-color: #1e3a8a;
 	color: white;
@@ -165,6 +170,9 @@ footer {
 	.feature {
 		flex: 1 1 100%;
 		max-width: 320px;
+	}
+	.compliance {
+		display: block;
 	}
 
 	.compliance-features {
