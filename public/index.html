@@ -14,7 +14,7 @@
 					<img src="logo.png" alt="Logo" />
 				</div>
 				<div class="nav-buttons">
-					<a class="btn" href="#">See Pricing</a>
+					<a class="btn" href="#pricing-section">See Pricing</a>
 					<button class="btn">Launch DPOhub</button>
 				</div>
 			</nav>
@@ -149,8 +149,59 @@
 					</div>
 				</div>
 			</section>
+			<!-- Pricing Section -->
+		<section id="pricing-section" class="pricing-section">
+			<h2 class="text-center text-light">Choose Your Plan</h2>
+			<div class="pricing-cards">
+				<div class="pricing-card">
+					<h3>Starter</h3>
+					<p class="price">$99<span>/month</span></p>
+					<ul>
+						<li>1 Controller</li>
+						<li>Core Compliance Tools</li>
+						<li>Email Support</li>
+						<li>Basic Reporting</li>
+					</ul>
+					<button class="btn">Start Free Trial</button>
+				</div>
+				<div class="pricing-card popular">
+					<h3>Professional</h3>
+					<p class="price">$199<span>/month</span></p>
+					<ul>
+						<li>Up to 5 Controllers</li>
+						<li>Advanced Compliance Tools</li>
+						<li>Priority Email & Chat Support</li>
+						<li>Automated Audits</li>
+					</ul>
+					<button class="btn">Start Free Trial</button>
+				</div>
+				<div class="pricing-card">
+					<h3>Business</h3>
+					<p class="price">$399<span>/month</span></p>
+					<ul>
+						<li>Up to 20 Controllers</li>
+						<li>All Pro Features</li>
+						<li>Dedicated Account Manager</li>
+						<li>Custom Integrations</li>
+					</ul>
+					<button class="btn">Start Free Trial</button>
+				</div>
+				<div class="pricing-card">
+					<h3>Enterprise</h3>
+					<p class="price">Custom</p>
+					<ul>
+						<li>Unlimited Controllers</li>
+						<li>All Business Features</li>
+						<li>24/7 Phone Support</li>
+						<li>On-Premise Option</li>
+					</ul>
+					<button class="btn">Contact Sales</button>
+				</div>
+			</div>
+		</section>
 		</div>
 
+		
 		<footer>
 			<h3>Ready to simplify your compliance journey?</h3>
 			<div class="social-links">
@@ -159,10 +210,10 @@
 				<a href="https://instagram.com/" target="_blank">Instagram</a>
 				<a href="https://facebook.com/" target="_blank">Facebook</a>
 			</div>
-			<p style="margin-top: 20px">Make the smart move with MyDPO.</p>
+			<p style="margin-top: 20px">Make the smart move with DPOhub.</p>
 			<div style="margin-top: 10px">
 				<button class="btn">Get Started Now</button>
-				<button class="btn">Contact Sales</button>
+				<a class="btn">Contact Sales</a>
 				<button class="btn">Download Brochure</button>
 			</div>
 			<p style="margin-top: 20px; font-size: 0.9em">
@@ -171,171 +222,3 @@
 		</footer>
 	</body>
 </html>
-
-<!-- <!DOCTYPE html>
-<html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
-		<title>MyDPO Header</title>
-		<style>
-			* {
-				box-sizing: border-box;
-				margin: 0;
-				padding: 0;
-			}
-
-			body {
-				font-family: Arial, sans-serif;
-				background-color: #f9f9f9;
-				color: #333;
-			}
-
-			header {
-				background-color: #fff;
-				box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-				padding: 20px 40px;
-				display: flex;
-				justify-content: space-between;
-				align-items: center;
-			}
-
-			.logo img {
-				height: 40px;
-			}
-
-			.nav-buttons button {
-				margin-left: 15px;
-				padding: 10px 20px;
-				border: none;
-				border-radius: 5px;
-				cursor: pointer;
-				font-weight: bold;
-			}
-
-			.nav-buttons .start {
-				background-color: #007bff;
-				color: white;
-			}
-
-			.nav-buttons .signup {
-				background-color: transparent;
-				color: #007bff;
-				border: 2px solid #007bff;
-			}
-
-			.hero {
-				display: flex;
-				flex-wrap: wrap;
-				justify-content: space-between;
-				align-items: center;
-				padding: 60px 40px;
-				background-color: #f0f4f8;
-			}
-
-			.hero-text {
-				flex: 1 1 45%;
-				max-width: 600px;
-			}
-
-			.hero-text h1 {
-				font-size: 36px;
-				text-transform: uppercase;
-				margin-bottom: 20px;
-			}
-
-			.hero-text h2 {
-				font-size: 24px;
-				margin-bottom: 10px;
-			}
-
-			.hero-text p {
-				font-size: 16px;
-				margin-bottom: 30px;
-			}
-
-			.hero-text .cta-buttons button {
-				margin-right: 15px;
-				padding: 12px 24px;
-				border: none;
-				border-radius: 5px;
-				font-weight: bold;
-				cursor: pointer;
-			}
-
-			.cta-buttons .trial {
-				background-color: #007bff;
-				color: white;
-			}
-
-			.cta-buttons .demo {
-				background-color: transparent;
-				color: #007bff;
-				border: 2px solid #007bff;
-			}
-
-			.hero-image {
-				flex: 1 1 45%;
-				max-width: 600px;
-				text-align: center;
-			}
-
-			.hero-image img {
-				max-width: 100%;
-				height: auto;
-				border-radius: 10px;
-				box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-			}
-
-			@media (max-width: 768px) {
-				.hero {
-					flex-direction: column;
-					text-align: center;
-				}
-
-				.hero-text,
-				.hero-image {
-					flex: 1 1 100%;
-					max-width: 100%;
-				}
-
-				.nav-buttons {
-					display: flex;
-					flex-direction: column;
-					align-items: flex-end;
-				}
-
-				.nav-buttons button {
-					margin: 10px 0 0 0;
-				}
-			}
-		</style>
-	</head>
-	<body>
-		<header>
-			<div class="logo">
-				<img src="/logo.svg" alt="Logo" />
-			</div>
-			<div class="nav-buttons">
-				<button class="start">Start Trial</button>
-				<button class="signup">Sign Up</button>
-			</div>
-		</header>
-
-		<div class="hero">
-			<div class="hero-text">
-				<h1>MASTER COMPLIANCE</h1>
-				<h2>MyDPO – All-in-One DPO Management</h2>
-				<p>Simple, Secure, Scalable, From $99/month.</p>
-				<div class="cta-buttons">
-					<button class="trial">Start Free Trial</button>
-					<button class="demo">Watch Demo</button>
-				</div>
-			</div>
-			<div class="hero-image">
-				<img src="/hero-image.png" alt="DPO Management Illustration" />
-			</div>
-		</div>
-	</body>
-</html> -->
