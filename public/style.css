@@ -160,9 +160,10 @@ section {
 	margin-bottom: 16px;
 	position: relative;
 }
-.pricing-card.popular {
-	border: 2px solid #2ac433;
+.pricing-card:hover {
+	border: 1px solid #2ac433;
 	box-shadow: 0 8px 32px rgba(42, 196, 51, 0.1);
+	cursor: pointer;
 }
 .pricing-card h3 {
 	font-size: 1.3em;
