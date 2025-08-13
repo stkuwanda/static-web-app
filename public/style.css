@@ -5,11 +5,11 @@
 body {
 	margin: 0;
 	font-family: Arial, sans-serif;
-	background-color: #f9f9f9;
+	background-color: #2B303A;
 	color: #333;
 }
 header {
-	background-color: #1e3a8a;
+	background: url('background.png') center center/cover no-repeat;
 	color: white;
 	text-align: center;
 	padding: 0px 20px;
@@ -21,6 +21,11 @@ nav {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
+}
+
+.section {
+ background: url('section.png') center center/cover no-repeat;
+ color: #ffff;
 }
 
 .logo img {
@@ -79,16 +84,17 @@ header p {
 	margin-top: 10px;
 }
 .btn {
-	background-color: #2563eb;
+	background-color: #2AC433;
 	color: white;
 	padding: 12px 24px;
+	text-decoration: none;
 	border: none;
 	border-radius: 6px;
 	cursor: pointer;
 	font-size: 1em;
 }
 .btn:hover {
-	background-color: #1d4ed8;
+	background-color: #2B303A;
 }
 section {
 	padding: 50px 20px;
@@ -121,8 +127,15 @@ section {
 	flex-wrap: wrap;
 	justify-content: space-between;
 }
+
+.text-light {
+	color: #ffff;
+}
+.text-center {
+	text-align: center;
+}
 footer {
-	background-color: #1e3a8a;
+	background-color: #2B303A;
 	color: white;
 	padding: 30px 20px;
 	text-align: center;
