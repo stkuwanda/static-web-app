@@ -1,0 +1,166 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+/* Call to action button */
+.cta-button {
+	background-color: #2563eb;
+	color: #ffffff;
+	font-weight: 700;
+	padding: 0.75rem 1.5rem;
+	border-radius: 0.5rem;
+	border: none;
+	cursor: pointer;
+	transition: background-color 0.3s ease-in-out;
+	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.cta-button:hover {
+	background-color: #1d4ed8;
+}
+
+/* Modal Styles */
+.modal {
+	display: none; /* Hidden by default */
+	position: fixed;
+	z-index: 1; /* Sit on top */
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.6); /* Black background with opacity */
+	align-items: center;
+	justify-content: center;
+}
+
+.modal.is-active {
+	display: flex;
+}
+
+/* Modal Content/Form */
+.modal-content {
+	background-color: #ffffff;
+	padding: 2.5rem;
+	border-radius: 1rem;
+	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+	width: 100%;
+	max-width: 28rem;
+	margin: auto;
+	position: relative;
+}
+
+@media (min-width: 640px) {
+	.modal-content {
+		padding: 3rem;
+	}
+}
+
+@media (min-width: 768px) {
+	.modal-content {
+		padding: 4rem;
+	}
+}
+
+/* Close Button */
+.close-button {
+	position: absolute;
+	top: 1rem;
+	right: 1.5rem;
+	color: #aaa;
+	font-size: 2rem;
+	font-weight: bold;
+	cursor: pointer;
+	transition: color 0.3s ease-in-out;
+}
+
+.close-button:hover,
+.close-button:focus {
+	color: #000;
+}
+
+/* Heading and paragraph styles */
+.modal-content h1 {
+	font-size: 1.875rem; /* 3xl */
+	font-weight: 700; /* bold */
+	text-align: center;
+	color: #1f2937; /* gray-800 */
+	margin-bottom: 1.5rem;
+}
+
+.modal-content p {
+	text-align: center;
+	color: #4b5563; /* gray-600 */
+	margin-bottom: 2rem;
+}
+
+/* Styles for form elements */
+.form-group {
+	margin-bottom: 1.5rem;
+}
+
+.form-group label {
+	display: block;
+	color: #374151; /* gray-700 */
+	font-weight: 600; /* semibold */
+	margin-bottom: 0.5rem;
+}
+
+.form-group input {
+	width: 100%;
+	padding: 0.5rem 1rem;
+	border: 1px solid #d1d5db;
+	border-radius: 0.5rem;
+	outline: none;
+	transition: border-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.form-group input:focus {
+	border-color: #3b82f6;
+	box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.5);
+}
+
+/* Submit button styles */
+.submit-button {
+	width: 100%;
+	background-color: #2563eb;
+	color: #ffffff;
+	font-weight: 700;
+	padding: 0.75rem 1.5rem;
+	border-radius: 0.5rem;
+	border: none;
+	cursor: pointer;
+	transition: background-color 0.3s ease-in-out;
+}
+
+.submit-button:hover {
+	background-color: #1d4ed8;
+}
+
+.submit-button:focus {
+	outline: none;
+	box-shadow: 0 0 0 2px #3b82f6, 0 0 0 4px rgba(59, 130, 246, 0.5);
+}
+
+/* Styles for the message box */
+.message-box {
+	position: fixed;
+	top: 1.25rem;
+	left: 50%;
+	transform: translateX(-50%);
+	padding: 1rem 2rem;
+	border-radius: 0.5rem;
+	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+	transition: opacity 0.3s ease-in-out;
+	z-index: 1000;
+}
+
+.message-box.hidden {
+	display: none;
+}
+
+.bg-green {
+	background-color: #22c55e;
+	color: white;
+}
+
+.bg-red {
+	background-color: #ef4444;
+	color: white;
+}
