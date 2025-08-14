@@ -1,20 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
-/* Call to action button */
-.cta-button {
-	background-color: #2563eb;
-	color: #ffffff;
-	font-weight: 700;
-	padding: 0.75rem 1.5rem;
-	border-radius: 0.5rem;
-	border: none;
-	cursor: pointer;
-	transition: background-color 0.3s ease-in-out;
-	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-.cta-button:hover {
-	background-color: #1d4ed8;
-}
 
 /* Modal Styles */
 .modal {
@@ -117,20 +101,26 @@
 }
 
 /* Submit button styles */
+
+/* Use .btn styles for modal submit button for consistency */
 .submit-button {
 	width: 100%;
-	background-color: #2563eb;
-	color: #ffffff;
-	font-weight: 700;
-	padding: 0.75rem 1.5rem;
-	border-radius: 0.5rem;
+	background-color: #2ac433;
+	color: #fff;
+	padding: 12px 24px;
+	text-decoration: none;
 	border: none;
+	border-radius: 6px;
 	cursor: pointer;
-	transition: background-color 0.3s ease-in-out;
+	font-size: 1em;
+	font-family: inherit;
+	font-weight: 700;
+	transition: background-color 0.3s;
 }
 
+
 .submit-button:hover {
-	background-color: #1d4ed8;
+	background-color: #2b303a;
 }
 
 .submit-button:focus {
