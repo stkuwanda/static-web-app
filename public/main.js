@@ -45,25 +45,44 @@ document.addEventListener('DOMContentLoaded', () => {
 	form.addEventListener('submit', (event) => {
 		event.preventDefault(); // Prevent default form submission
 
-		// Simple validation check
-		const inputs = form.querySelectorAll('input[required]');
-		let isValid = true;
-		inputs.forEach((input) => {
-			if (!input.value) {
-				isValid = false;
-			}
-		});
+		// Get input values
+		const demoDate = form.elements['demo-date'].value.trim();
+		const organization = form.elements['organization'].value.trim();
+		const fullName = form.elements['full-name'].value.trim();
+		const cellNumber = form.elements['cell-number'].value.trim();
+		const email = form.elements['email'].value.trim();
 
-		if (!isValid) {
-			messageBox.textContent = 'Please fill in all the required fields.';
-			messageBox.classList.remove('bg-green', 'hidden');
-			messageBox.classList.add('bg-red');
-			messageBox.style.opacity = 1;
+		// Validation regexes
+		const orgRegex = /^[\w\s.,'&()\-]{2,100}$/;
+		const nameRegex = /^[A-Za-z\s\-']{2,100}$/;
+		const cellRegex = /^[\d\s()+-]{7,20}$/;
+		const emailRegex = /^[\w.-]+@[\w.-]+\.[A-Za-z]{2,}$/;
 
-			setTimeout(() => {
-				messageBox.style.opacity = 0;
-				setTimeout(() => messageBox.classList.add('hidden'), 300);
-			}, 3000);
+		// Date validation: must be today or in the future
+		const today = new Date();
+		const selectedDate = new Date(demoDate);
+		today.setHours(0, 0, 0, 0);
+		selectedDate.setHours(0, 0, 0, 0);
+		if (!demoDate || selectedDate < today) {
+			showError('Please select a valid date (today or later).');
+			return;
+		}
+		if (!organization || !orgRegex.test(organization)) {
+			showError('Organization name contains invalid characters.');
+			return;
+		}
+		if (!fullName || !nameRegex.test(fullName)) {
+			showError(
+				'Full name should only contain letters, spaces, hyphens, or apostrophes.'
+			);
+			return;
+		}
+		if (!cellNumber || !cellRegex.test(cellNumber)) {
+			showError('Cell number format is invalid.');
+			return;
+		}
+		if (!email || !emailRegex.test(email)) {
+			showError('Please enter a valid email address.');
 			return;
 		}
 
@@ -89,4 +108,15 @@ document.addEventListener('DOMContentLoaded', () => {
 			hideModal();
 		}, 3000);
 	});
+
+	function showError(msg) {
+		messageBox.textContent = msg;
+		messageBox.classList.remove('bg-green', 'hidden');
+		messageBox.classList.add('bg-red');
+		messageBox.style.opacity = 1;
+		setTimeout(() => {
+			messageBox.style.opacity = 0;
+			setTimeout(() => messageBox.classList.add('hidden'), 300);
+		}, 3000);
+	}
 });
