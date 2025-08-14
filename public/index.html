@@ -91,9 +91,22 @@
 				<div class="logo">
 					<img src="logo.png" alt="Logo" />
 				</div>
-				<div class="nav-buttons">
+				<!-- Hamburger button for mobile -->
+				<button class="hamburger" id="hamburger-menu" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
+					<span></span>
+					<span></span>
+					<span></span>
+				</button>
+				<div class="nav-buttons desktop-nav">
 					<a class="btn" href="#pricing-section">See Pricing</a>
+					<button id="open-modal-btn-3" class="btn">Demo</button>
 					<button class="btn">Client Hub</button>
+				</div>
+				<!-- Mobile menu, hidden by default -->
+				<div class="mobile-nav" id="mobile-menu">
+					<a class="btn" href="#pricing-section">See Pricing</a>
+					<button id="open-modal-btn-4" class="btn">Demo</button>
+					<button id="open-modal-btn-2" class="btn">Client Hub</button>
 				</div>
 			</nav>
 			<section class="hero">
@@ -106,11 +119,6 @@
 					<p>Local laws, Map, Automate, Prove From $99/month.</p>
 					<div class="cta-buttons">
 						<button id="open-modal-btn" class="btn">Book A Demo</button>
-						<a
-							class="btn"
-							href="https://youtube.com/@dpohub.africa?si=-o0dEOPP9q5nW-0b"
-							>Watch A Demo</a
-						>
 					</div>
 				</div>
 			</section>

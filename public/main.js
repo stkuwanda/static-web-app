@@ -1,3 +1,16 @@
+// Hamburger menu toggle
+document.addEventListener('DOMContentLoaded', function () {
+	const hamburger = document.getElementById('hamburger-menu');
+	const mobileMenu = document.getElementById('mobile-menu');
+	if (hamburger && mobileMenu) {
+		hamburger.addEventListener('click', function () {
+			const expanded = hamburger.getAttribute('aria-expanded') === 'true';
+			hamburger.setAttribute('aria-expanded', !expanded);
+			mobileMenu.classList.toggle('is-active');
+			hamburger.classList.toggle('is-active');
+		});
+	}
+});
 console.log('Main JavaScript file loaded successfully.');
 
 // Initialize Supabase client
@@ -12,7 +25,10 @@ document.addEventListener('DOMContentLoaded', () => {
 	const messageBox = document.getElementById('message-box');
 	const modal = document.getElementById('modal');
 	const openModalBtn = document.getElementById('open-modal-btn');
-  const openModalBtn1 = document.getElementById('open-modal-btn-1');
+	const openModalBtn1 = document.getElementById('open-modal-btn-1');
+  const openModalBtn2 = document.getElementById('open-modal-btn-2');
+  const openModalBtn3 = document.getElementById('open-modal-btn-3');
+  const openModalBtn4 = document.getElementById('open-modal-btn-4');
 	const closeButton = document.querySelector('.close-button');
 
 	// Function to show the modal
@@ -39,7 +55,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
 	// Event listeners to open and close the modal
 	openModalBtn.addEventListener('click', showModal);
-  openModalBtn1.addEventListener('click', showModal);
+	openModalBtn1.addEventListener('click', showModal);
+  openModalBtn2.addEventListener('click', showModal);
+  openModalBtn3.addEventListener('click', showModal);
+  openModalBtn4.addEventListener('click', showModal);
 	closeButton.addEventListener('click', hideModal);
 
 	// Close the modal if the user clicks outside of it
@@ -99,7 +118,7 @@ document.addEventListener('DOMContentLoaded', () => {
 			organization: organization,
 			full_name: fullName,
 			cell_number: cellNumber,
-			email: email
+			email: email,
 		};
 
 		// Save to Supabase
@@ -131,9 +150,10 @@ document.addEventListener('DOMContentLoaded', () => {
 			}
 
 			console.log('Data saved successfully:', data);
-			
+
 			// Show success message
-			messageBox.textContent = "Your demo request has been saved! We'll be in touch shortly.";
+			messageBox.textContent =
+				"Your demo request has been saved! We'll be in touch shortly.";
 			messageBox.classList.remove('bg-red', 'hidden');
 			messageBox.classList.add('bg-green');
 			messageBox.style.opacity = 1;
@@ -145,7 +165,6 @@ document.addEventListener('DOMContentLoaded', () => {
 			setTimeout(() => {
 				hideModal();
 			}, 3000);
-
 		} catch (error) {
 			console.error('Network error:', error);
 			showError('Network error occurred. Please check your connection.');
