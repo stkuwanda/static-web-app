@@ -10,6 +10,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
 	// Function to show the modal
 	function showModal() {
+		// Hide and reset the message box every time modal is opened
+		messageBox.classList.add('hidden');
+		messageBox.classList.remove('bg-green', 'bg-red');
+		messageBox.textContent = '';
+		messageBox.style.opacity = 1;
 		modal.classList.add('is-active');
 	}
 
