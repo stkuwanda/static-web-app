@@ -9,6 +9,16 @@ document.addEventListener('DOMContentLoaded', function () {
 			mobileMenu.classList.toggle('is-active');
 			hamburger.classList.toggle('is-active');
 		});
+
+		// Close mobile menu when any menu button is clicked
+		const mobileMenuButtons = mobileMenu.querySelectorAll('a, button');
+		mobileMenuButtons.forEach(btn => {
+			btn.addEventListener('click', function () {
+				mobileMenu.classList.remove('is-active');
+				hamburger.classList.remove('is-active');
+				hamburger.setAttribute('aria-expanded', 'false');
+			});
+		});
 	}
 });
 console.log('Main JavaScript file loaded successfully.');
