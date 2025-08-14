@@ -5,6 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
 	const messageBox = document.getElementById('message-box');
 	const modal = document.getElementById('modal');
 	const openModalBtn = document.getElementById('open-modal-btn');
+  const openModalBtn1 = document.getElementById('open-modal-btn-1');
 	const closeButton = document.querySelector('.close-button');
 
 	// Function to show the modal
@@ -26,6 +27,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 	// Event listeners to open and close the modal
 	openModalBtn.addEventListener('click', showModal);
+  openModalBtn1.addEventListener('click', showModal);
 	closeButton.addEventListener('click', hideModal);
 
 	// Close the modal if the user clicks outside of it
