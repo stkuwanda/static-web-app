@@ -1,4 +1,11 @@
 console.log('Main JavaScript file loaded successfully.');
+
+// Initialize Supabase client
+const supabase = window.supabase.createClient(
+	window.supabaseConfig.url,
+	window.supabaseConfig.anonKey
+);
+
 document.addEventListener('DOMContentLoaded', () => {
 	const form = document.getElementById('booking-form');
 	const demoDateInput = document.getElementById('demo-date');
@@ -87,26 +94,16 @@ document.addEventListener('DOMContentLoaded', () => {
 		}
 
 		// Collect form data
-		const formData = new FormData(form);
-		const data = Object.fromEntries(formData.entries());
+		const formData = {
+			demo_date: demoDate,
+			organization: organization,
+			full_name: fullName,
+			cell_number: cellNumber,
+			email: email
+		};
 
-		// Log the data to the console
-		console.log('Demo Request Submitted:', data);
-
-		// Simulate a successful submission
-		messageBox.textContent =
-			"Your demo request has been sent! We'll be in touch shortly.";
-		messageBox.classList.remove('bg-red', 'hidden');
-		messageBox.classList.add('bg-green');
-		messageBox.style.opacity = 1;
-
-		// Clear the form fields after submission
-		form.reset();
-
-		// Hide the modal after 3 seconds
-		setTimeout(() => {
-			hideModal();
-		}, 3000);
+		// Save to Supabase
+		saveToSupabase(formData);
 	});
 
 	function showError(msg) {
@@ -118,5 +115,40 @@ document.addEventListener('DOMContentLoaded', () => {
 			messageBox.style.opacity = 0;
 			setTimeout(() => messageBox.classList.add('hidden'), 300);
 		}, 3000);
+	}
+
+	// Function to save form data to Supabase
+	async function saveToSupabase(formData) {
+		try {
+			const { data, error } = await supabase
+				.from('demo_requests')
+				.insert([formData]);
+
+			if (error) {
+				console.error('Error saving to Supabase:', error);
+				showError('Failed to save your request. Please try again.');
+				return;
+			}
+
+			console.log('Data saved successfully:', data);
+			
+			// Show success message
+			messageBox.textContent = "Your demo request has been saved! We'll be in touch shortly.";
+			messageBox.classList.remove('bg-red', 'hidden');
+			messageBox.classList.add('bg-green');
+			messageBox.style.opacity = 1;
+
+			// Clear the form fields after submission
+			form.reset();
+
+			// Hide the modal after 3 seconds
+			setTimeout(() => {
+				hideModal();
+			}, 3000);
+
+		} catch (error) {
+			console.error('Network error:', error);
+			showError('Network error occurred. Please check your connection.');
+		}
 	}
 });
