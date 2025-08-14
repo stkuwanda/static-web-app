@@ -13,11 +13,9 @@
 	align-items: center;
 	justify-content: center;
 }
-
 .modal.is-active {
 	display: flex;
 }
-
 /* Modal Content/Form */
 .modal-content {
 	background-color: #ffffff;
@@ -29,19 +27,16 @@
 	margin: auto;
 	position: relative;
 }
-
 @media (min-width: 640px) {
 	.modal-content {
 		padding: 3rem;
 	}
 }
-
 @media (min-width: 768px) {
 	.modal-content {
 		padding: 4rem;
 	}
 }
-
 /* Close Button */
 .close-button {
 	position: absolute;
@@ -53,12 +48,10 @@
 	cursor: pointer;
 	transition: color 0.3s ease-in-out;
 }
-
 .close-button:hover,
 .close-button:focus {
 	color: #000;
 }
-
 /* Heading and paragraph styles */
 .modal-content h1 {
 	font-size: 1.875rem; /* 3xl */
@@ -67,25 +60,21 @@
 	color: #1f2937; /* gray-800 */
 	margin-bottom: 1.5rem;
 }
-
 .modal-content p {
 	text-align: center;
 	color: #4b5563; /* gray-600 */
 	margin-bottom: 2rem;
 }
-
 /* Styles for form elements */
 .form-group {
 	margin-bottom: 1.5rem;
 }
-
 .form-group label {
 	display: block;
 	color: #374151; /* gray-700 */
 	font-weight: 600; /* semibold */
 	margin-bottom: 0.5rem;
 }
-
 .form-group input {
 	width: 100%;
 	padding: 0.5rem 1rem;
@@ -94,15 +83,10 @@
 	outline: none;
 	transition: border-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
-
 .form-group input:focus {
 	border-color: #3b82f6;
 	box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.5);
 }
-
-/* Submit button styles */
-
-/* Use .btn styles for modal submit button for consistency */
 .submit-button {
 	width: 100%;
 	background-color: #2ac433;
@@ -117,12 +101,9 @@
 	font-weight: 700;
 	transition: background-color 0.3s;
 }
-
-
 .submit-button:hover {
 	background-color: #2b303a;
 }
-
 .submit-button:focus {
 	outline: none;
 	box-shadow: 0 0 0 2px #3b82f6, 0 0 0 4px rgba(59, 130, 246, 0.5);
@@ -140,16 +121,13 @@
 	transition: opacity 0.3s ease-in-out;
 	z-index: 1000;
 }
-
 .message-box.hidden {
 	display: none;
 }
-
 .bg-green {
 	background-color: #22c55e;
 	color: white;
 }
-
 .bg-red {
 	background-color: #ef4444;
 	color: white;
