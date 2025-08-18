@@ -1,3 +1,34 @@
+@media (max-width: 480px) {
+	.modal-content {
+		padding: 1rem;
+		border-radius: 0.5rem;
+		max-width: 98vw;
+		min-width: 0;
+		width: 100vw;
+		box-sizing: border-box;
+		font-size: 1em;
+		overflow-y: auto;
+		max-height: 95vh;
+	}
+	.modal-content h1 {
+		font-size: 1.3rem;
+	}
+	.modal-content p {
+		font-size: 1em;
+	}
+	.close-button {
+		font-size: 1.5rem;
+		top: 0.5rem;
+		right: 1rem;
+	}
+	.form-group label, .form-group input {
+		font-size: 1em;
+	}
+	.submit-button {
+		font-size: 1em;
+		padding: 10px 16px;
+	}
+}
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
 
 /* Modal Styles */
